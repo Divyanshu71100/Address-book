@@ -129,12 +129,12 @@ resetBtn.addEventListener('click', function(){
 function setMessage(status, message){
     let messageBox = document.querySelector('.message');
     if(status == "error"){
-        messageBox.innerHTML = ${message};
+        messageBox.innerHTML = {message};
         messageBox.classList.add('error');
         removeMessage(status, messageBox);
     }
     if(status == "success"){
-        messageBox.innerHTML = ${message};
+        messageBox.innerHTML = {message};
         messageBox.classList.add('success');
         removeMessage(status, messageBox);
     }
@@ -154,7 +154,7 @@ function clearInputFields(){
 // Removing status/alerts
 function removeMessage(status, messageBox){
     setTimeout(function(){
-        messageBox.classList.remove(${status});
+        messageBox.classList.remove({status});
     }, 2000);
 }
 
@@ -177,6 +177,6 @@ function phoneNumCheck(inputtxt){
     if(inputtxt.match(phoneNo)){
         return true;
     } else {
-        return false;
-    }
+        return false;
+}
 }
